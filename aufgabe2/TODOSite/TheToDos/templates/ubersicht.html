@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+
+		<!--Meta Data-->
+
+		<meta charset="utf-8">
+
+		<meta name="description" content="erste Aufgabe ProgrammierPraktikum soziale Netwerke SS2018">
+
+		<meta name="keywords" content="HTML,CSS,Bootstrap,JavaScript">
+
+		<meta name="author" content="Mageda El-Hussein, Emre Göl">
+
+		<!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+
+
+
+		
+
+  
+
+		<title>Aufgabe 1 SoNe18</title>
+
+		
+
+		
+
+	    <!-- link for Bootstrap CDN , aka man muss nichts downloaden alle libraries über diese links verfügbar gemacht -->
+
+		<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+
+		
+
+	</head>
+
+	
+
+	<body>
+
+		<!--header, titel-->
+
+
+
+		<div class="card-body col-10">				
+
+			<a type="button" class="btn btn-lg btn-block btn-outline-primary col-5" href="../">back to main</a>
+
+		</div>
+
+		
+
+		<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+
+			<h1 class="display-4">Übersicht</h1>
+
+			<p class="lead">Hier finden Sie alle TODOs</p>
+
+		</div>
+
+		
+
+		<div class="container">
+
+			<!--das erste beispel aendert seine große nicht bei extra smal geraeten..weiß nicht was besser aussieht, kannst du mir ja sagen-->
+
+
+
+			<!--Table Variante Anfang-->
+
+
+
+			<div class="row">
+
+				<div class="col-lg-12">
+
+					<table class="table table-hover ">
+
+
+
+						<tr class="bg-info">
+
+							<th>Aufgabe</th>
+
+							<th>Deadline</th>
+
+							<th>Fortschritt (%)</th>
+
+							<th></th>
+
+						</tr>
+						
+<!-- list = alle obeject in model ToDoData; todo = ein object-->		
+    
+						{% for todo in list %}
+    						<tr>
+        						<td>{{todo.description}}</td>
+        						<td>{{todo.deadline}}</td>
+        						<td>{{todo.percent}}</td>
+        						<td class="text-right">
+
+    								<a type="button" class="btn btn-primary" href="/TheToDos/edit/{{todo.id}}">EDIT</a>
+
+    								<a type="button" class="btn btn-primary" href="/TheToDos/delete/{{todo.id}}">DELETE</a>
+
+    							</td>
+                     </tr>
+                     
+                  {% endfor %}   
+ 
+
+					</table>
+
+				</div>
+
+			</div>
+
+
+
+			<!--Table Variante Ende-->
+
+
+
+			<!--zweites Beispiel, bessere anpassung auf handy, erstes beispiel andere anpassung für small -->
+		
+			<div class="row mb-4">
+
+				<div class=" col-lg-8 col-md-6 col-sm-12 bg-warning">
+
+					We have to do this thing with bootstrap that thing thing. yeah exactly.
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 col-6 bg-info">
+
+					29.04.2018
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 col-6 bg-danger">
+
+					12%
+
+				</div>
+
+				
+
+				<div class=" col-lg-2 col-md-2 col-sm-12">
+
+					<button type="button" class="btn btn-primary">EDIT</button>
+
+					<button type="button" class="btn btn-primary">DELETE</button>
+
+				</div>
+
+			</div>
+
+			<div class="row mb-4">
+
+				<div class=" col-lg-8 col-md-6 col-sm-12 bg-warning">
+
+					We have to do this thing with bootstrap that thing thing. yeah exactly.
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 bg-info">
+
+					29.04.2018
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 bg-danger">
+
+					12%
+
+				</div>
+
+				
+
+				<div class=" col-lg-2 col-md-2 col-sm-12">
+
+					<button type="button" class="btn btn-primary">EDIT</button>
+
+					<button type="button" class="btn btn-primary">DELETE</button>
+
+				</div>
+
+			</div>
+
+			<div class="row mb-4">
+
+				<div class=" col-lg-8 col-md-6 col-sm-12 bg-warning">
+
+					We have to do this thing with bootstrap that thing thing. yeah exactly.
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 bg-info">
+
+					29.04.2018
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 bg-danger">
+
+					12%
+
+				</div>
+
+				
+
+				<div class=" col-lg-2 col-md-2 col-sm-12">
+
+					<button type="button" class="btn btn-primary">EDIT</button>
+
+					<button type="button" class="btn btn-primary">DELETE</button>
+
+				</div>
+
+			</div>
+
+			<div class="row mb-4">
+
+				<div class=" col-lg-8 col-md-6 col-sm-12 bg-warning">
+
+					We have to do this thing with bootstrap that thing thing. yeah exactly.
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 bg-info">
+
+					29.04.2018
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 bg-danger">
+
+					12%
+
+				</div>
+
+				
+
+				<div class=" col-lg-2 col-md-2 col-sm-12">
+
+					<button type="button" class="btn btn-primary">EDIT</button>
+
+					<button type="button" class="btn btn-primary">DELETE</button>
+
+				</div>
+
+			</div>
+
+			<div class="row mb-4">
+
+				<div class=" col-lg-8 col-md-6 col-sm-12 bg-warning">
+
+					We have to do this thing with bootstrap that thing thing. yeah exactly.
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 bg-info">
+
+					29.04.2018
+
+				</div>
+
+				<div class=" col-lg-1 col-md-2 col-sm-6 bg-danger">
+
+					12%
+
+				</div>
+
+				
+
+				<div class=" col-lg-2 col-md-2 col-sm-12">
+
+					<button type="button" class="btn btn-primary">EDIT</button>
+
+					<button type="button" class="btn btn-primary">DELETE</button>
+
+				</div>
+
+			</div>
+
+		</div>
+
+	
+
+		<!-- Google's CDN link for jQuery because bootstrap javascript requires jQuery , has to be above the bootstrap js file-->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	
+
+		<!-- script links for bootstrap javascript CDN at the body of the page-->
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.bundle.min.js" integrity="sha384-lZmvU/TzxoIQIOD9yQDEpvxp6wEU32Fy0ckUgOH4EIlMOCdR823rg4+3gWRwnX1M" crossorigin="anonymous"></script>
+
+
+
+	</body>
+
+</html>
